@@ -6,11 +6,11 @@
 Using multithread if possible.
 #### 2.Plot the in-out trend of specific station in specific steps according to the users' choices.
 #### 3.Planning the route for the user based ont the following principles:
-LESS STATION CHANGES ARE $\color{green}{PREFERRER}$.
+LESS STATION CHANGES ARE <font color=gray size=5>gray</font>.
 
-LESS CROWED (ACCORDING TO PRIOR DATA) IS $\color{green}{PREFERRER}$.
+LESS CROWED (ACCORDING TO PRIOR DATA) IS <font color=gray size=5>gray</font>.
 
-FEWER TIME NEED TO TAKE IS$\color{green}{PREFERRER}$.
+FEWER TIME NEED TO TAKE IS  <font color=gray size=5>gray</font>.
 
 #### 4.(*)Visualize the route if possible 
 #### 5.(*)Utilize DataBase to optimize the storation of data.
