@@ -1,21 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include<QAction>
-#include<QMenuBar>
-#include<QMessageBox>
-#include<QStatusBar>
-#include<QToolBar>
-#include<QPushButton>
-#include<QIODevice>
-#include<QDebug>
-#include<QTextStream>
-#include<QDir>
-#include<QFile>
-#include<QColor>
-#include<QPainter>
-#include<QTime>
-#include<QPushButton>
-#include<QFileDialog>
+
+
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -23,9 +9,16 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    clock = new QTime();
     this->setFixedSize(1000, 1000);
     load_adjacency_map();
-    solving_route(1, 81);
+    QStringList file_names = get_file_name("../dataset_CS241/dataset/");
+    progressdig = new QProgressDialog(tr("Downloading Progress"), tr("Cancel"), 0, record_file_name.count(), this);
+    progressdig->setWindowTitle("Downloading Files");
+    progressdig->show();
+    load_record_data();
+
+    //solving_route(1, 81);
 }
 
 MainWindow::~MainWindow()
@@ -33,7 +26,27 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+
+
+void MainWindow::load_record_data(){
+    for (int i = 0;i < record_file_name.count();++i){
+        QFile file_pth("../dataset_CS241/dataset/" + record_file_name[i]);
+        cout << file_pth<<endl;
+        if (!file_pth.open(QIODevice::ReadOnly))
+            qDebug() << "Failed to load file-----\n";
+        else
+            qDebug() << "Success loading file-----\n";
+        QTextStream* out = new QTextStream(&file_pth);
+        QStringList tmp = out -> readAll().split("\n");
+        QStringList t;
+        for(int i = 0;i < tmp.count();++i)
+            t = tmp.at(i).split(",");
+        //progressdig->setValue(i);
+    }
+
+}
 void MainWindow::load_adjacency_map(){
+
     QVector<QStringList> data;
     qDebug() << "Begin to load adjancency map-----" << "\n";
     QFile file_pth("../dataset_CS241/adjacency_adjacency/Metro_roadMap.csv");
@@ -53,9 +66,10 @@ void MainWindow::load_adjacency_map(){
     for (int i = 0;i < 81;++i)
         for (int j = 0;j < 81;++j)
             adjmap[i][j] = bool(data.at(i + 2).at(j + 1).toInt());
-
-
 }
+
+
+
 void MainWindow::dfs(int now, int des, vector<int> rec){
     if (now == des) {
         solving_number ++;
@@ -90,14 +104,25 @@ void MainWindow::solving_route(int s,int d){
     for (int i = 0;i < 90;++i)
         for (int j = 0;j < 90;++j)
              used[i][j] = 0;
-
     solving_number = 0;
     s --;
     d--;
     vector<int> rec;
     rec.push_back(s + 1);
     dfs(0, d, rec);
-    if(solving_number == 0) cout << "cannot find a possible route!"
+    if(solving_number == 0) cout << "cannot find a possible route!";
 }
+
+
+QStringList MainWindow::get_file_name(const QString &path){
+    QDir dir(path);
+    QStringList namefilters;
+    namefilters << "*.csv";
+    QStringList files = dir.entryList(namefilters, QDir::Files|QDir::Readable, QDir::Name);
+    record_file_name = files;
+    return files;
+}
+
+
 
 
