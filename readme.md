@@ -14,6 +14,7 @@ FEWER TIME NEED TO TAKE IS  <font color=gray size=5>gray</font>.
 
 4.(*)Visualize the route if possible 
 5.(*)Utilize DataBase to optimize the storation of data.
+
 name | 价格 |  数量  
 -|-|-
 香蕉 | $1 | 5 |
