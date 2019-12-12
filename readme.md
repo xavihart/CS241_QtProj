@@ -17,10 +17,9 @@ The main functions that are planned to be implemented:
 
 >FEWER TIME NEED TO TAKE IS  PREFERRED.
 
-Extra:
-
-|4.Visualize the route if possible|
+|Extra work in this project|
 |-|
+|Visualize the route if possible|
 |Utilize DataBase to optimize the storation of data.|
 
 
