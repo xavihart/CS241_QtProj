@@ -21,13 +21,23 @@
 #include<QSqlError>
 #include<QSqlQuery>
 #include<vector>
+#include<algorithm>
 #include<QProgressDialog>
 #include<QTimer>
-
+#include<mythread.h>
+#include<QPainter>
+#include<QPen>
+#include<QPushButton>
+#include<QPixmap>
+#include<QString>
+#include<cmath>
+#include<QRegExp>
+#include<QRegExpValidator>
+#include<QIcon>
 #define cout qDebug()
 using namespace std;
 namespace Ui {
-class MainWindow;
+  class MainWindow;
 }
 
 class MainWindow : public QMainWindow
@@ -36,7 +46,7 @@ class MainWindow : public QMainWindow
 
 public:
     explicit MainWindow(QWidget *parent = 0);
-    void solving_route(int start_ID, int destination_ID);
+
     ~MainWindow();
 
 private:
@@ -51,6 +61,34 @@ private:
     void load_record_data();
     QStringList get_file_name(const QString& path);
     QProgressDialog * progressdig;
+    QStringList tmp_var;
+    QPainter * painter;
+    void paintEvent(QPaintEvent*);
+    QPixmap pix;
+    vector<vector<int>> route;
+    QString start_text, end_text;
+    int input_right = 0;
+    template<class T>
+        vector<int> my_sort(vector<T> );   //return the index string.
+     
+    
+    //OPTIMIZATIO FOR ROUTE ADVISING:return the 3th best, if have;
+    int weight_changes = 2;
+    int weight_crowed = 3;
+    int weight_length = 5;
+    vector<vector<int>> find_the_best_route(vector<vector<int>>);
+    void solving_route();
+    
+signals:
+    void route_advicing_begin(int x, int y, int c1, int c2, int c3 , int w);
+public slots:
+    void send_signal_for_routeadvicing(){
+        qDebug() << "get signal!";
+        emit route_advicing_begin(200, 300, 2, 202, 20, 10);
+    }
+    void draw_3(int, int, QColor, int);
+    void ask_for_route_advicing();
+
 };
 
 #endif // MAINWINDOW_H
