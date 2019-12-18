@@ -14,7 +14,7 @@
 #include<QStringList>
 #include<QVector>
 #include <vector>
-
+/*
 namespace Ui {
    class  route_drawer;
 }
@@ -34,5 +34,5 @@ public slots:
     void start();
 
 };
-
+*/
 #endif // DRAWROUTE_H

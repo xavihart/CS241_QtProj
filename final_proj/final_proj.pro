@@ -27,15 +27,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    mythread.cpp \
-    drawroute.cpp
+    openwindow.cpp \
+    plotdata.cpp
 
 HEADERS += \
         mainwindow.h \
-    mythread.h \
-    drawroute.h
+    openwindow.h \
+    plotdata.h
 
 FORMS += \
         mainwindow.ui\
-    drawroute.ui
+    openwindow.ui \
+    plotdata.ui
 

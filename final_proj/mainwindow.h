@@ -34,6 +34,8 @@
 #include<QRegExp>
 #include<QRegExpValidator>
 #include<QIcon>
+#include<QThread>
+
 #define cout qDebug()
 using namespace std;
 namespace Ui {
@@ -78,7 +80,7 @@ private:
     int weight_length = 5;
     vector<vector<int>> find_the_best_route(vector<vector<int>>);
     void solving_route();
-    
+    QVector<QStringList> store_data[7];
 signals:
     void route_advicing_begin(int x, int y, int c1, int c2, int c3 , int w);
 public slots:
@@ -88,6 +90,10 @@ public slots:
     }
     void draw_3(int, int, QColor, int);
     void ask_for_route_advicing();
+
+
+    //data try:
+
 
 };
 

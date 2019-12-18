@@ -10,7 +10,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     clock = new QTime();
-    this->setFixedSize(1000, 1000);
+    this->setFixedSize(1000, 500);
     load_adjacency_map();
 
     QStringList file_names = get_file_name("../dataset_CS241/dataset/");
@@ -43,7 +43,12 @@ MainWindow::MainWindow(QWidget *parent) :
     //load_record_data();
     //solving_route(1, 81);
     //paintEvent();
-    
+
+    //test code:
+    //
+   
+
+
 }
 
 void MainWindow::paintEvent(QPaintEvent*){
@@ -57,7 +62,6 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
-
 
 
 void MainWindow::load_record_data(){
@@ -149,7 +153,7 @@ void MainWindow::solving_route(){
     }
     s = ui->start->text().toInt();
     d = ui->dest->text().toInt();
-    if(s > 81 || d > 81){
+    if(s > 81 || d > 81 || s == 0 || d == 0){
         input_right = 0;
         ui->showroute->setTextColor(Qt::red);
         ui->showroute->setText("PLease input the right station ID!");
@@ -277,3 +281,7 @@ vector<int> MainWindow::my_sort(vector<T> a){
 }
 
 
+/*
+void data_thread::run(){
+    
+}*/

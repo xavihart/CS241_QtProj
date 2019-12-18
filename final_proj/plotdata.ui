@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>route_drawer</class>
- <widget class="QMainWindow" name="route_drawer">
+ <class>plotdata</class>
+ <widget class="QMainWindow" name="plotdata">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -14,17 +14,24 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="start">
+   <widget class="QDateTimeEdit" name="dateTimeEdit">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>60</y>
-      <width>89</width>
-      <height>21</height>
+      <x>30</x>
+      <y>50</y>
+      <width>194</width>
+      <height>26</height>
      </rect>
     </property>
-    <property name="text">
-     <string>PushButton</string>
+   </widget>
+   <widget class="QDateTimeEdit" name="dateTimeEdit_2">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>50</y>
+      <width>194</width>
+      <height>26</height>
+     </rect>
     </property>
    </widget>
   </widget>
