@@ -35,19 +35,14 @@
 #include<QRegExpValidator>
 #include<QIcon>
 #include<QThread>
+#include <QSqlDatabase>
+#include<QSqlQuery>
+#include<QSqlError>
 
 #define cout qDebug()
 namespace Ui {
   class openwindow;
 }
-
-class openwindow:public QMainWindow{
-    Q_OBJECT
-public:
-    explicit openwindow(QWidget *parent = 0);
-    ~openwindow();
-    Ui::openwindow *ui;
-};
 
 class my_thread:public QThread{
   Q_OBJECT
@@ -57,10 +52,26 @@ public:
     void run();
     QStringList file_names;
     QStringList get_file_name(const QString& path);
-    QVector<QStringList> data[7];    // data[0]~data[6] represent data for 7 days
+    QVector<QStringList> data[7][30];    // data[0]~data[6] represent data for 7 days
 
 signals:
     void progress_changed(int );
+
+};
+
+class openwindow:public QMainWindow{
+    Q_OBJECT
+public:
+    explicit openwindow(QWidget *parent = 0);
+    ~openwindow();
+    Ui::openwindow *ui;
+    my_thread mt;
+public slots:
+    void data_loading_thread_begin(){
+        mt.start();
+    }
+    void change_progbar(int);
+
 
 };
 

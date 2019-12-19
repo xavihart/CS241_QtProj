@@ -35,6 +35,10 @@
 #include<QRegExpValidator>
 #include<QIcon>
 #include<QThread>
+#include <QSqlDatabase>
+#include<QSqlQuery>
+#include<QSqlError>
+#include<openwindow.h>
 
 #define cout qDebug()
 using namespace std;
@@ -90,7 +94,6 @@ public slots:
     }
     void draw_3(int, int, QColor, int);
     void ask_for_route_advicing();
-
 
     //data try:
 

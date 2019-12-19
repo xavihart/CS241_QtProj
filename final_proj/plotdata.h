@@ -5,6 +5,10 @@
 #include<QThread>
 #include<QStringList>
 #include"mainwindow.h"
+#include <QSqlDatabase>
+#include<QSqlQuery>
+#include<QSqlError>
+#include<QVariantList>
 namespace Ui {
   class plotdata;
 }
@@ -17,6 +21,7 @@ public:
     ~plotdata();
     Ui::plotdata *ui;
     bool data_downloaded = 0;
+
 };
 
 

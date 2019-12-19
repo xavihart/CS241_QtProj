@@ -95,9 +95,6 @@ void MainWindow::load_adjacency_map(){
         qDebug() << "Success loading adjacency file-----\n";
     QTextStream* out = new QTextStream(&file_pth);
     QStringList tmp = out -> readAll().split("\n");
-    qDebug() << tmp.at(0)<<endl;
-    qDebug() << tmp.at(1)<<endl;
-    qDebug() << tmp.at(2)<<endl;
     for(int i = 0; i < tmp.count(); ++i)
          data.append(tmp.at(i).split(","));
     //int data_w = data.count() - 1, data_len = data[2].count() - 1;
