@@ -69,7 +69,7 @@ public:
     Ui::openwindow *ui;
     my_thread mt;
     QProgressDialog *pd;
-    QLineSeries *series;
+
 
 
 public slots:

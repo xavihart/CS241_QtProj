@@ -22,10 +22,16 @@
 #include <QtCore/QTextStream>
 #include <QtCore/QDebug>
 #include <QtCharts/QValueAxis>
+#include<QVector>
+#include<QMessageBox>
 
 namespace Ui {
   class plotdata;
 }
+
+
+
+
 
 class plotdata:public QMainWindow{
     Q_OBJECT
@@ -36,6 +42,11 @@ public:
     Ui::plotdata *ui;
     bool data_downloaded = 0;
     QString generate_exe(QDateTime startingtime, QDateTime endingtime, int stationID, int status);
+    QLineSeries *series, *series2;
+    QVector<int> in_flow;
+    QVector<int> out_flow;
+    QVector<int> x_stick;
+
 public slots:
 
     void plot_passflow();

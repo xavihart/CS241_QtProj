@@ -1622,6 +1622,11 @@ moc_plotdata.cpp: ../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QMainWindow 
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/qvxymodelmapper.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/qxylegendmarker.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/qtchartsversion.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QApplication \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/QChartView \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/QLineSeries \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/QDateTimeAxis \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QVector \
 		plotdata.h \
 		moc_predefs.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/bin/moc
@@ -1829,6 +1834,25 @@ main.o: main.cpp mainwindow.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QVector \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QDialog \
 		ui_plotdata.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QDate \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QVariant \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QApplication \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qapplication.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/qcoreapplication.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/qeventloop.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qguiapplication.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qinputmethod.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QDateTimeEdit \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qdatetimeedit.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QLabel \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qlabel.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qframe.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QLineEdit \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qlineedit.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qtextcursor.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qtextformat.h \
 		plotdata.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QVariantList \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QDateTime \
@@ -1838,7 +1862,6 @@ main.o: main.cpp mainwindow.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QtCoreDepends \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/qabstractanimation.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/qabstracteventdispatcher.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/qeventloop.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/qabstractnativeeventfilter.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/qabstractproxymodel.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/qabstractstate.h \
@@ -1853,7 +1876,6 @@ main.o: main.cpp mainwindow.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/qcollator.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/qcommandlineoption.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/qcommandlineparser.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/qcoreapplication.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/qcryptographichash.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/qdeadlinetimer.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/qelapsedtimer.h \
@@ -1943,11 +1965,9 @@ main.o: main.cpp mainwindow.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QtGuiDepends \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qabstracttextdocumentlayout.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qtextlayout.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qtextformat.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qglyphrun.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qrawfont.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qfontdatabase.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qtextcursor.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qtextdocument.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qaccessible.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qaccessiblebridge.h \
@@ -1967,8 +1987,6 @@ main.o: main.cpp mainwindow.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qgenericmatrix.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qgenericplugin.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qgenericpluginfactory.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qguiapplication.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qinputmethod.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qiconengine.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qiconengineplugin.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qimageiohandler.h \
@@ -2039,18 +2057,14 @@ main.o: main.cpp mainwindow.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QtWidgetsDepends \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qstyleoption.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qabstractspinbox.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qslider.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qabstractslider.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qstyle.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qtabbar.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qrubberband.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qframe.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qabstractitemview.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qabstractscrollarea.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qaccessiblewidget.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qapplication.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qdesktopwidget.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qboxlayout.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qlayout.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qlayoutitem.h \
@@ -2066,7 +2080,6 @@ main.o: main.cpp mainwindow.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qcommonstyle.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qcompleter.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qdatawidgetmapper.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qdatetimeedit.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qdial.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qdialogbuttonbox.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qdirmodel.h \
@@ -2101,12 +2114,10 @@ main.o: main.cpp mainwindow.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qgroupbox.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qheaderview.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qinputdialog.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qlineedit.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qitemdelegate.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qitemeditorfactory.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qkeyeventtransition.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qkeysequenceedit.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qlabel.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qlcdnumber.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qlistview.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qlistwidget.h \
@@ -2126,7 +2137,6 @@ main.o: main.cpp mainwindow.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QScrollerProperties \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qscrollerproperties.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QMetaType \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QVariant \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qshortcut.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qsizegrip.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qspinbox.h \
@@ -2236,7 +2246,9 @@ main.o: main.cpp mainwindow.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/qvxymodelmapper.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/qxylegendmarker.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/qtchartsversion.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QApplication \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/QChartView \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/QLineSeries \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/QDateTimeAxis \
 		ui_openwindow.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QProgressBar
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o main.cpp
@@ -3194,7 +3206,16 @@ plotdata.o: plotdata.cpp plotdata.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/qvxymodelmapper.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/qxylegendmarker.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/qtchartsversion.h \
-		ui_plotdata.h
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QApplication \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/QChartView \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/QLineSeries \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/QDateTimeAxis \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QVector \
+		ui_plotdata.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QDate \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QDateTimeEdit \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QLabel \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QLineEdit
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o plotdata.o plotdata.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 

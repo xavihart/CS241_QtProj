@@ -23,8 +23,46 @@
       <height>26</height>
      </rect>
     </property>
+    <property name="date">
+     <date>
+      <year>2019</year>
+      <month>1</month>
+      <day>1</day>
+     </date>
+    </property>
+    <property name="minimumDateTime">
+     <datetime>
+      <hour>0</hour>
+      <minute>0</minute>
+      <second>0</second>
+      <year>2019</year>
+      <month>1</month>
+      <day>1</day>
+     </datetime>
+    </property>
+    <property name="maximumDate">
+     <date>
+      <year>2019</year>
+      <month>1</month>
+      <day>13</day>
+     </date>
+    </property>
+    <property name="minimumDate">
+     <date>
+      <year>2019</year>
+      <month>1</month>
+      <day>1</day>
+     </date>
+    </property>
+    <property name="minimumTime">
+     <time>
+      <hour>0</hour>
+      <minute>0</minute>
+      <second>0</second>
+     </time>
+    </property>
     <property name="displayFormat">
-     <string>yyyy-MM-dd hh::mm::ss</string>
+     <string>2019-01-dd hh::mm::ss</string>
     </property>
    </widget>
    <widget class="QDateTimeEdit" name="dateTimeEdit_2">
@@ -36,8 +74,29 @@
       <height>26</height>
      </rect>
     </property>
+    <property name="date">
+     <date>
+      <year>2019</year>
+      <month>1</month>
+      <day>1</day>
+     </date>
+    </property>
+    <property name="maximumDate">
+     <date>
+      <year>2019</year>
+      <month>1</month>
+      <day>13</day>
+     </date>
+    </property>
+    <property name="minimumDate">
+     <date>
+      <year>2019</year>
+      <month>1</month>
+      <day>1</day>
+     </date>
+    </property>
     <property name="displayFormat">
-     <string>yyyy-MM-dd hh::mm::ss</string>
+     <string>2019-01-dd hh::mm::ss</string>
     </property>
    </widget>
    <widget class="QPushButton" name="plt">
@@ -53,7 +112,7 @@
      <string>plot</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="step_hour">
     <property name="geometry">
      <rect>
       <x>450</x>
@@ -63,7 +122,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
+   <widget class="QLineEdit" name="step_min">
     <property name="geometry">
      <rect>
       <x>450</x>
@@ -73,7 +132,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_3">
+   <widget class="QLineEdit" name="step_sec">
     <property name="geometry">
      <rect>
       <x>450</x>
@@ -83,7 +142,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLabel" name="step_hour">
+   <widget class="QLabel" name="label_hour">
     <property name="geometry">
      <rect>
       <x>510</x>
@@ -96,7 +155,7 @@
      <string>hour(s)</string>
     </property>
    </widget>
-   <widget class="QLabel" name="step_min">
+   <widget class="QLabel" name="label_min">
     <property name="geometry">
      <rect>
       <x>510</x>
@@ -109,7 +168,7 @@
      <string>minutes(s)</string>
     </property>
    </widget>
-   <widget class="QLabel" name="step_sec">
+   <widget class="QLabel" name="label_sec">
     <property name="geometry">
      <rect>
       <x>510</x>
@@ -120,6 +179,29 @@
     </property>
     <property name="text">
      <string>second(s)</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="stationnumber">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>140</y>
+      <width>51</width>
+      <height>25</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_station">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>140</y>
+      <width>67</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>station</string>
     </property>
    </widget>
   </widget>
