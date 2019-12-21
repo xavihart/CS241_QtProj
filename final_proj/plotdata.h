@@ -9,6 +9,20 @@
 #include<QSqlQuery>
 #include<QSqlError>
 #include<QVariantList>
+#include<QSqlQueryModel>
+#include<QDateTime>
+#include  <QtCharts>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QMainWindow>
+#include <QtCharts/QChartView>
+#include <QtCharts/QLineSeries>
+#include <QtCore/QDateTime>
+#include <QtCharts/QDateTimeAxis>
+#include <QtCore/QFile>
+#include <QtCore/QTextStream>
+#include <QtCore/QDebug>
+#include <QtCharts/QValueAxis>
+
 namespace Ui {
   class plotdata;
 }
@@ -21,6 +35,10 @@ public:
     ~plotdata();
     Ui::plotdata *ui;
     bool data_downloaded = 0;
+    QString generate_exe(QDateTime startingtime, QDateTime endingtime, int stationID, int status);
+public slots:
+
+    void plot_passflow();
 
 };
 

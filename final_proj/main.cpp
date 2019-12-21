@@ -6,6 +6,7 @@
 #include <QApplication>
 #include<signal.h>
 #include<ui_openwindow.h>
+
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
@@ -49,7 +50,10 @@ int main(int argc, char *argv[])
         cout << "db is not open!";
     }
     QSqlQuery sql_query;
-    bool isTableExist = sql_query.exec(QString("select count(*) from sqlite_master where type='table' and name='%1'").arg("record"));
+    sql_query.exec(QString("select count(*) from sqlite_master where type='table' and name='%1'").arg("record"));
+    sql_query.next();
+    bool isTableExist = (sql_query.value(0).toInt() != 0);
+    cout << isTableExist << "!";
     if(isTableExist){
       cout << "Table exist, no need creating!---";
     }else{
@@ -100,19 +104,6 @@ int main(int argc, char *argv[])
     database.close();
 
  */
-
-
-
-
-
-
-
-
-
-
-
-
-
     return a.exec();
 
     /*

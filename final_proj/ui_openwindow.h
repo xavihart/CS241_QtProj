@@ -13,6 +13,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QProgressBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
@@ -26,6 +27,7 @@ public:
     QPushButton *advicing_route;
     QPushButton *data_plotting;
     QPushButton *download_data;
+    QProgressBar *progressBar;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -45,6 +47,10 @@ public:
         download_data = new QPushButton(centralwidget);
         download_data->setObjectName(QStringLiteral("download_data"));
         download_data->setGeometry(QRect(40, 110, 131, 25));
+        progressBar = new QProgressBar(centralwidget);
+        progressBar->setObjectName(QStringLiteral("progressBar"));
+        progressBar->setGeometry(QRect(210, 70, 118, 23));
+        progressBar->setValue(24);
         openwindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(openwindow);
         menubar->setObjectName(QStringLiteral("menubar"));

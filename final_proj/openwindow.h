@@ -38,6 +38,7 @@
 #include <QSqlDatabase>
 #include<QSqlQuery>
 #include<QSqlError>
+#include<QSqlQueryModel>
 
 #define cout qDebug()
 namespace Ui {
@@ -53,7 +54,8 @@ public:
     QStringList file_names;
     QStringList get_file_name(const QString& path);
     QVector<QStringList> data[7][30];    // data[0]~data[6] represent data for 7 days
-
+    bool already_downloaded[215] = {0};
+    QProgressDialog *pd;
 signals:
     void progress_changed(int );
 
@@ -66,13 +68,14 @@ public:
     ~openwindow();
     Ui::openwindow *ui;
     my_thread mt;
+    QProgressDialog *pd;
+    QLineSeries *series;
+
+
 public slots:
-    void data_loading_thread_begin(){
-        mt.start();
-    }
+    void data_loading_thread_begin();
+
     void change_progbar(int);
-
-
 };
 
 
