@@ -1,5 +1,5 @@
 
-## This is the source file of the final project
+## source file of the CS241 final project
 About " Data Visualization and Analysis of Hanzhou Metric System" written in Qt5.
 The main functions that are planned to be implemented:
 
