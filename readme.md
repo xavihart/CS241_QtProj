@@ -9,6 +9,7 @@ The main functions that are planned to be implemented:
 |Planning the route for the users|
 
 
+
 3.Planning the route for the user based ont the following principles:
 
 >LESS STATION CHANGES ARE PREFERRED.
@@ -16,6 +17,8 @@ The main functions that are planned to be implemented:
 >LESS CROWED (ACCORDING TO PRIOR DATA) IS PREFERRED.
 
 >FEWER TIME NEED TO TAKE IS  PREFERRED.
+
+
 
 |Extra work in this project|
 |-|
