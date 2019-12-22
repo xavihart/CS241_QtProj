@@ -1,6 +1,6 @@
 
 ## source file of the CS241 final project
-About " Data Visualization and Analysis of Hanzhou Metric System" written in Qt5.
+About " Data Visualization and Analysis of Hanzhou Metric System" written in Qt5 in linux.
 The main functions that are planned to be implemented:
 
 |Load file according to the users' interest|
