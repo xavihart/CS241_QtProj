@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[12];
-    char stringdata0[108];
+    QByteArrayData data[14];
+    char stringdata0[128];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -42,12 +42,15 @@ QT_MOC_LITERAL(7, 43, 2), // "c3"
 QT_MOC_LITERAL(8, 46, 1), // "w"
 QT_MOC_LITERAL(9, 48, 29), // "send_signal_for_routeadvicing"
 QT_MOC_LITERAL(10, 78, 6), // "draw_3"
-QT_MOC_LITERAL(11, 85, 22) // "ask_for_route_advicing"
+QT_MOC_LITERAL(11, 85, 22), // "ask_for_route_advicing"
+QT_MOC_LITERAL(12, 108, 13), // "data_prepared"
+QT_MOC_LITERAL(13, 122, 5) // "show_"
 
     },
     "MainWindow\0route_advicing_begin\0\0x\0y\0"
     "c1\0c2\0c3\0w\0send_signal_for_routeadvicing\0"
-    "draw_3\0ask_for_route_advicing"
+    "draw_3\0ask_for_route_advicing\0"
+    "data_prepared\0show_"
 };
 #undef QT_MOC_LITERAL
 
@@ -57,7 +60,7 @@ static const uint qt_meta_data_MainWindow[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       4,   14, // methods
+       6,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -65,12 +68,14 @@ static const uint qt_meta_data_MainWindow[] = {
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    6,   34,    2, 0x06 /* Public */,
+       1,    6,   44,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       9,    0,   47,    2, 0x0a /* Public */,
-      10,    4,   48,    2, 0x0a /* Public */,
-      11,    0,   57,    2, 0x0a /* Public */,
+       9,    0,   57,    2, 0x0a /* Public */,
+      10,    4,   58,    2, 0x0a /* Public */,
+      11,    0,   67,    2, 0x0a /* Public */,
+      12,    0,   68,    2, 0x0a /* Public */,
+      13,    0,   69,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int,    3,    4,    5,    6,    7,    8,
@@ -78,6 +83,8 @@ static const uint qt_meta_data_MainWindow[] = {
  // slots: parameters
     QMetaType::Void,
     QMetaType::Void, QMetaType::Int, QMetaType::Int, QMetaType::QColor, QMetaType::Int,    2,    2,    2,    2,
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
 
        0        // eod
@@ -93,6 +100,8 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 1: _t->send_signal_for_routeadvicing(); break;
         case 2: _t->draw_3((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< QColor(*)>(_a[3])),(*reinterpret_cast< int(*)>(_a[4]))); break;
         case 3: _t->ask_for_route_advicing(); break;
+        case 4: _t->data_prepared(); break;
+        case 5: _t->show_(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -132,13 +141,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 4)
+        if (_id < 6)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 6;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 4)
+        if (_id < 6)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 4;
+        _id -= 6;
     }
     return _id;
 }

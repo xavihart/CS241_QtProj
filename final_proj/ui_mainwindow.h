@@ -16,7 +16,6 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPlainTextEdit>
-#include <QtWidgets/QProgressBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTextEdit>
@@ -40,7 +39,6 @@ public:
     QPlainTextEdit *plainTextEdit_2;
     QPlainTextEdit *plainTextEdit_3;
     QLabel *logo;
-    QProgressBar *pgb;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -82,7 +80,7 @@ public:
 "color: rgb(32, 74, 135);"));
         plainTextEdit = new QPlainTextEdit(centralWidget);
         plainTextEdit->setObjectName(QStringLiteral("plainTextEdit"));
-        plainTextEdit->setGeometry(QRect(340, 50, 351, 71));
+        plainTextEdit->setGeometry(QRect(330, 50, 361, 61));
         QFont font2;
         font2.setFamily(QStringLiteral("Source Code Pro"));
         font2.setPointSize(30);
@@ -123,10 +121,6 @@ public:
         logo = new QLabel(centralWidget);
         logo->setObjectName(QStringLiteral("logo"));
         logo->setGeometry(QRect(20, 10, 111, 111));
-        pgb = new QProgressBar(centralWidget);
-        pgb->setObjectName(QStringLiteral("pgb"));
-        pgb->setGeometry(QRect(870, 10, 118, 23));
-        pgb->setValue(24);
         MainWindow->setCentralWidget(centralWidget);
         map->raise();
         pushButton->raise();
@@ -139,7 +133,6 @@ public:
         plainTextEdit_2->raise();
         plainTextEdit_3->raise();
         logo->raise();
-        pgb->raise();
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
         menuBar->setGeometry(QRect(0, 0, 1000, 22));

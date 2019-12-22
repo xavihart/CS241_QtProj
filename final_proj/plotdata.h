@@ -43,13 +43,18 @@ public:
     bool data_downloaded = 0;
     QString generate_exe(QDateTime startingtime, QDateTime endingtime, int stationID, int status);
     QLineSeries *series, *series2;
-    QVector<int> in_flow;
-    QVector<int> out_flow;
+    QSplineSeries *sps, *sps2;
+    QVector<double> in_flow;
+    QVector<double> out_flow;
     QVector<int> x_stick;
+    int data_ready=0;
 
 public slots:
 
     void plot_passflow();
+    void data_prepared(){data_ready = 1;}
+    void show_();
+
 
 };
 

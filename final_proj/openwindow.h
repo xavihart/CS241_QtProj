@@ -26,6 +26,7 @@
 #include<QTimer>
 #include<mythread.h>
 #include<QPainter>
+#include<QRect>
 #include<QPen>
 #include<QPushButton>
 #include<QPixmap>
@@ -39,6 +40,9 @@
 #include<QSqlQuery>
 #include<QSqlError>
 #include<QSqlQueryModel>
+#include<QGraphicsScene>
+#include<QImage>
+#include<QPalette>
 
 #define cout qDebug()
 namespace Ui {
@@ -59,6 +63,7 @@ public:
 signals:
     void progress_changed(int );
 
+
 };
 
 class openwindow:public QMainWindow{
@@ -74,8 +79,9 @@ public:
 
 public slots:
     void data_loading_thread_begin();
-
     void change_progbar(int);
+signals:
+    void data_ready();
 };
 
 

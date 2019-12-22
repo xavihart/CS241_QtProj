@@ -28,8 +28,11 @@ int main(int argc, char *argv[])
     opwindow.show();
     MainWindow adv_w;
     plotdata dataploting_w;
-    QObject::connect(opwindow.ui->data_plotting, SIGNAL(clicked(bool)), &dataploting_w, SLOT(show()));
-    QObject::connect(opwindow.ui->advicing_route, SIGNAL(clicked()), &adv_w, SLOT(show()));
+    QObject::connect(&opwindow, SIGNAL(data_ready()), &dataploting_w, SLOT(data_prepared()));
+    QObject::connect(&opwindow, SIGNAL(data_ready()), &adv_w, SLOT(data_prepared()));
+
+    QObject::connect(opwindow.ui->data_plotting, SIGNAL(clicked(bool)), &dataploting_w, SLOT(show_()));
+    QObject::connect(opwindow.ui->advicing_route, SIGNAL(clicked()), &adv_w, SLOT(show_()));
     my_thread load_file_thread;
     //load_file_thread.data = record_data;
     QObject::connect(opwindow.ui->download_data, SIGNAL(clicked()),&opwindow, SLOT(data_loading_thread_begin()));

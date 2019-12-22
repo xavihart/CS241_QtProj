@@ -107,10 +107,10 @@ p, li { white-space: pre-wrap; }
    <widget class="QPlainTextEdit" name="plainTextEdit">
     <property name="geometry">
      <rect>
-      <x>340</x>
+      <x>330</x>
       <y>50</y>
-      <width>351</width>
-      <height>71</height>
+      <width>361</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="font">
@@ -244,19 +244,6 @@ p, li { white-space: pre-wrap; }
      <string/>
     </property>
    </widget>
-   <widget class="QProgressBar" name="pgb">
-    <property name="geometry">
-     <rect>
-      <x>870</x>
-      <y>10</y>
-      <width>118</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="value">
-     <number>24</number>
-    </property>
-   </widget>
    <zorder>map</zorder>
    <zorder>pushButton</zorder>
    <zorder>pushButton_2</zorder>
@@ -268,7 +255,6 @@ p, li { white-space: pre-wrap; }
    <zorder>plainTextEdit_2</zorder>
    <zorder>plainTextEdit_3</zorder>
    <zorder>logo</zorder>
-   <zorder>pgb</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">

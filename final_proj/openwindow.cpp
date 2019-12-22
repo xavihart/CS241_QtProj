@@ -8,15 +8,31 @@ ui(new Ui::openwindow)
   ui->setupUi(this);
   this->setWindowTitle("Welcome to HanZhou Metro System");
   connect(&mt, SIGNAL(progress_changed(int)), this, SLOT(change_progbar(int)));
+  // set the image:
+  QPixmap bkg_pic("../dataset_CS241/pic/Hangzhou.jpg"), button_pic("../dataset_CS241/pic/cristalbutton.jpg");
+  ui->bkg->setPixmap(bkg_pic);
+  ui->bkg->setScaledContents(true);
+  ui->bkg->lower();
+  ui->bkg->show();
+
+  QPalette pa, pa2, pa3, pa4;
+  pa.setColor(QPalette::WindowText,Qt::white);
+  ui->label->setPalette(pa);
+  ui->label_2->setPalette(pa);
 
 }
 
 openwindow::~openwindow(){delete ui;}
 void openwindow::change_progbar(int p){
-    cout << "receive changing signals" << p;
+    //cout << "receive changing signals" << p;
     ui->progressBar->setMaximum(209);
     ui->progressBar->setValue(p);
+    if(p >= 209){
+        emit data_ready();
+    }
+
 }
+
 QStringList my_thread::get_file_name(const QString &path){
     QDir dir(path);
     QStringList namefilters;
@@ -34,6 +50,8 @@ void my_thread::run(){
     database.setDatabaseName("../MetroRecord.db");
     database.open();
     QSqlQuery sql_query;
+
+
     // check whether the file is existing---
     sql_query.exec(QString("select count(*) from sqlite_master where type='table' and name='%1'").arg("record"));
     sql_query.next();
@@ -50,6 +68,8 @@ void my_thread::run(){
           //cout << "table created unsuccessfully in my_thread";
       }
     }
+
+    // check whether the data is already there
      sql_query.exec("select count(*) from record");
      sql_query.next();
      int number=  sql_query.value(0).toInt();
@@ -60,6 +80,8 @@ void my_thread::run(){
          f = 0;
          emit progress_changed(209);
      }
+
+     //download data
 if(f){
     for (int j = 0;j < file_names.count();++j){
         QTime time_each;
@@ -124,6 +146,37 @@ cout << "creating index tool about" << indextime.elapsed() / 1000.0/ 60 << "min"
 
 
 void openwindow::data_loading_thread_begin(){
+    // filter:
+    int a[8];
+    a[0] = int(ui->checkBox_9->isChecked());
+    a[1] = int(ui->checkBox_10->isChecked());
+    a[2] = int(ui->checkBox_11->isChecked());
+    a[3] = int(ui->checkBox_12->isChecked());
+    a[4] = int(ui->checkBox_13->isChecked());
+    a[5] = int(ui->checkBox_14->isChecked());
+    a[6] = int(ui->checkBox_15->isChecked());
+    a[7] = int(ui->checkBox_16->isChecked());
+
+    int tot = 0;
+    for(int i = 0;i < 8;++i)
+        tot += a[i];
+    if(tot == 0){
+        QMessageBox::information(NULL, "Warning", "At least choose one to download!",
+                                 QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes);
+        return;
+    }
+
+    if(a[7] == 0){
+        QMessageBox::information(NULL, "Warning", "AdjMap not choosed, the route planning function will be unusable!",
+                                 QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes);
+        return;
+    }
+    if(a[0] == 0 || a[1] == 0 || a[5] == 0){
+        QMessageBox::information(NULL, "Warning", "Time, status, stationID is necessary for plotting traffic flow!",
+                                 QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes);
+        return;
+    }
+
     mt.start();
 }
 

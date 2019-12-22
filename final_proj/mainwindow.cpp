@@ -278,7 +278,11 @@ vector<int> MainWindow::my_sort(vector<T> a){
 }
 
 
-/*
-void data_thread::run(){
-    
-}*/
+void MainWindow::show_(){
+    if(!data_ready){
+        QMessageBox::information(NULL, "Warning", "Data not prepared for route advicing!!",
+                                 QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes);
+    }else{
+        this->show();
+    }
+}

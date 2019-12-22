@@ -871,9 +871,14 @@ moc_mainwindow.cpp: ../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QAction \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QThread \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/qthread.h \
 		openwindow.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QRect \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtSql/QSqlQueryModel \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtSql/qsqlquerymodel.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/qabstractitemmodel.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QGraphicsScene \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qgraphicsscene.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QImage \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QPalette \
 		mainwindow.h \
 		moc_predefs.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/bin/moc
@@ -1030,6 +1035,7 @@ moc_openwindow.cpp: ../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QAction \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/qtimer.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/qbasictimer.h \
 		mythread.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QRect \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QPen \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QPixmap \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QString \
@@ -1043,6 +1049,10 @@ moc_openwindow.cpp: ../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QAction \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtSql/QSqlQueryModel \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtSql/qsqlquerymodel.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/qabstractitemmodel.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QGraphicsScene \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qgraphicsscene.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QImage \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QPalette \
 		openwindow.h \
 		moc_predefs.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/bin/moc
@@ -1213,9 +1223,14 @@ moc_plotdata.cpp: ../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QMainWindow 
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/qregularexpression.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QIcon \
 		openwindow.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QRect \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtSql/QSqlQueryModel \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtSql/qsqlquerymodel.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/qabstractitemmodel.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QGraphicsScene \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qgraphicsscene.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QImage \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QPalette \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QVariantList \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QDateTime \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/QtCharts \
@@ -1343,7 +1358,6 @@ moc_plotdata.cpp: ../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QMainWindow 
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qwindow.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QEvent \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QMargins \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QRect \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qsurface.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qsurfaceformat.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qbitmap.h \
@@ -1395,7 +1409,6 @@ moc_plotdata.cpp: ../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QMainWindow 
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QWindow \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QPaintDevice \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QOpenGLContext \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QImage \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qpagedpaintdevice.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qpagelayout.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qpagesize.h \
@@ -1478,7 +1491,6 @@ moc_plotdata.cpp: ../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QMainWindow 
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qgraphicslinearlayout.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qgraphicsproxywidget.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qgraphicswidget.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qgraphicsscene.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qgraphicssceneevent.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qgraphicstransform.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QVector3D \
@@ -1824,9 +1836,14 @@ main.o: main.cpp mainwindow.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QThread \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/qthread.h \
 		openwindow.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QRect \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtSql/QSqlQueryModel \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtSql/qsqlquerymodel.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/qabstractitemmodel.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QGraphicsScene \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qgraphicsscene.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QImage \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QPalette \
 		drawroute.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QPaintEvent \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QWidget \
@@ -1977,7 +1994,6 @@ main.o: main.cpp mainwindow.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qwindow.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QEvent \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QMargins \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QRect \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qsurface.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qsurfaceformat.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qbitmap.h \
@@ -2027,7 +2043,6 @@ main.o: main.cpp mainwindow.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QWindow \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QPaintDevice \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QOpenGLContext \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QImage \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qpagedpaintdevice.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qpagelayout.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qpagesize.h \
@@ -2105,7 +2120,6 @@ main.o: main.cpp mainwindow.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qgraphicslinearlayout.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qgraphicsproxywidget.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qgraphicswidget.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qgraphicsscene.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qgraphicssceneevent.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qgraphicstransform.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QVector3D \
@@ -2250,6 +2264,9 @@ main.o: main.cpp mainwindow.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/QLineSeries \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/QDateTimeAxis \
 		ui_openwindow.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QCheckBox \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QFormLayout \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QGridLayout \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QProgressBar
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o main.cpp
 
@@ -2416,9 +2433,14 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QThread \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/qthread.h \
 		openwindow.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QRect \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtSql/QSqlQueryModel \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtSql/qsqlquerymodel.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/qabstractitemmodel.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QGraphicsScene \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qgraphicsscene.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QImage \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QPalette \
 		ui_mainwindow.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QVariant \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QApplication \
@@ -2445,8 +2467,6 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qglyphrun.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qrawfont.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qfontdatabase.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QProgressBar \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qprogressbar.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QTextEdit \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o mainwindow.cpp
@@ -2603,6 +2623,7 @@ openwindow.o: openwindow.cpp openwindow.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/qtimer.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/qbasictimer.h \
 		mythread.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QRect \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QPen \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QPixmap \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QString \
@@ -2616,6 +2637,10 @@ openwindow.o: openwindow.cpp openwindow.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtSql/QSqlQueryModel \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtSql/qsqlquerymodel.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/qabstractitemmodel.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QGraphicsScene \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qgraphicsscene.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QImage \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QPalette \
 		ui_openwindow.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QVariant \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QApplication \
@@ -2625,9 +2650,21 @@ openwindow.o: openwindow.cpp openwindow.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qdesktopwidget.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qguiapplication.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qinputmethod.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QCheckBox \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qcheckbox.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QFormLayout \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qformlayout.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QLayout \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qlayout.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qlayoutitem.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qboxlayout.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qgridlayout.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QGridLayout \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QLabel \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qlabel.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qframe.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QProgressBar \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qprogressbar.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qframe.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o openwindow.o openwindow.cpp
 
@@ -2797,9 +2834,14 @@ plotdata.o: plotdata.cpp plotdata.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/qregularexpression.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QIcon \
 		openwindow.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QRect \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtSql/QSqlQueryModel \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtSql/qsqlquerymodel.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/qabstractitemmodel.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QGraphicsScene \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qgraphicsscene.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QImage \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QPalette \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QVariantList \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QDateTime \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/QtCharts \
@@ -2927,7 +2969,6 @@ plotdata.o: plotdata.cpp plotdata.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qwindow.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QEvent \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QMargins \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QRect \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qsurface.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qsurfaceformat.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qbitmap.h \
@@ -2979,7 +3020,6 @@ plotdata.o: plotdata.cpp plotdata.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QWindow \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QPaintDevice \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QOpenGLContext \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QImage \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qpagedpaintdevice.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qpagelayout.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qpagesize.h \
@@ -3062,7 +3102,6 @@ plotdata.o: plotdata.cpp plotdata.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qgraphicslinearlayout.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qgraphicsproxywidget.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qgraphicswidget.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qgraphicsscene.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qgraphicssceneevent.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qgraphicstransform.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QVector3D \
