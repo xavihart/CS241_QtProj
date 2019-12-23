@@ -1,12 +1,13 @@
 
 ## source file of the CS241 final project
-About " Data Visualization and Analysis of Hanzhou Metric System" written in Qt5.
+About " Data Visualization and Analysis of Hanzhou Metric System" written in Qt5 in linux.
 The main functions that are planned to be implemented:
 
 |Load file according to the users' interest|
 |-|
 |Plot the in-out trend of specific station in specific steps according to the users' choices|
 |Planning the route for the users|
+
 
 
 3.Planning the route for the user based ont the following principles:
@@ -16,6 +17,8 @@ The main functions that are planned to be implemented:
 >LESS CROWED (ACCORDING TO PRIOR DATA) IS PREFERRED.
 
 >FEWER TIME NEED TO TAKE IS  PREFERRED.
+
+
 
 |Extra work in this project|
 |-|
