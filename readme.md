@@ -4,7 +4,7 @@ About " Data Visualization and Analysis of Hanzhou Metric System" written in Qt5
 
 #### Demo:
 
-![exp]("https://github.com/xavihart/CS241_QtProj/blob/master/openwindow.PNG")
+![exp](https://github.com/xavihart/CS241_QtProj/blob/master/openwindow.PNG)
 
 
 
@@ -42,6 +42,6 @@ The ui are mainly made up of 3 parts: `ui_openwindow`, `ui_mainwindow` and `ui_p
 
 
  ###   More Windows:
- ![exp]("https://github.com/xavihart/CS241_QtProj/blob/master/designPic.PNG")
+ ![exp](https://github.com/xavihart/CS241_QtProj/blob/master/designPic.PNG)
 
 
