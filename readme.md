@@ -4,7 +4,7 @@ About " Data Visualization and Analysis of Hanzhou Metric System" written in Qt5
 
 #### Demo:
 
-![exp](https://github.com/xavihart/CS241_QtProj/blob/master/openwindow.PNG =200x400)
+![exp](https://github.com/xavihart/CS241_QtProj/blob/master/openwindow.PNG)
 
 
 
