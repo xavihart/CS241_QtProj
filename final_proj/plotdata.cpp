@@ -6,10 +6,15 @@ QMainWindow(parent),
 ui(new Ui::plotdata)
 {
   ui->setupUi(this);
-  this->setWindowTitle("Plot data");
+  this->setWindowTitle("Visualize Hanzhou Metro Traffic Flow");
   connect(ui->plt, SIGNAL(clicked(bool)), this, SLOT(plot_passflow()));
-  this->setFixedHeight(300);
-  this->setFixedWidth(547);
+  this->setFixedHeight(314);
+  this->setFixedWidth(822);
+  QPixmap bkg_pic("../dataset_CS241/pic/hz2.jpg");
+  ui->bkg->setPixmap(bkg_pic);
+  ui->bkg->setScaledContents(true);
+  ui->bkg->lower();
+  ui->bkg->show();
 }
 
 plotdata::~plotdata(){delete ui;}
@@ -32,7 +37,7 @@ void plotdata::plot_passflow(){
     int step_hour = ui->step_hour->text().toInt(),  \
         step_min = ui->step_min->text().toInt(), \
         step_sec = ui->step_sec->text().toInt(), \
-        station_num = ui->stationnumber->text().toInt();
+        station_num = ui->stationnumber->text().toInt() - 1;
      QDateTime tmp = stime;
      int num_in=0, num_out=0;
      if((step_hour * 60 * 60 +  step_min * 60 + step_sec) == 0){
@@ -40,7 +45,7 @@ void plotdata::plot_passflow(){
                                   QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes);
          return;
      }
-     if(station_num > 81 || station_num <= 0){
+     if(station_num >= 81 || station_num < 0){
          QMessageBox::information(NULL, "Warning", "Please input the right station number!",
                                   QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes);
          return;

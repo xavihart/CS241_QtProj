@@ -2265,7 +2265,6 @@ main.o: main.cpp mainwindow.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/QDateTimeAxis \
 		ui_openwindow.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QCheckBox \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QFormLayout \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QGridLayout \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QProgressBar
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o main.cpp
@@ -2457,17 +2456,10 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qlineedit.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qtextcursor.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qtextformat.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QPlainTextEdit \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qplaintextedit.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QTextEdit \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qtextedit.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qabstractscrollarea.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qtextdocument.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qabstracttextdocumentlayout.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qtextlayout.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qglyphrun.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qrawfont.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qfontdatabase.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QTextEdit \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o mainwindow.cpp
 
@@ -2652,14 +2644,11 @@ openwindow.o: openwindow.cpp openwindow.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/qinputmethod.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QCheckBox \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qcheckbox.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QFormLayout \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qformlayout.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QLayout \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QGridLayout \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qgridlayout.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qlayout.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qlayoutitem.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qboxlayout.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qgridlayout.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QGridLayout \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QLabel \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qlabel.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qframe.h \

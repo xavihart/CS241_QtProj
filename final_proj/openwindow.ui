@@ -22,7 +22,7 @@
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>120</y>
+      <y>100</y>
       <width>151</width>
       <height>41</height>
      </rect>
@@ -42,7 +42,7 @@
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>230</y>
+      <y>190</y>
       <width>151</width>
       <height>41</height>
      </rect>
@@ -361,8 +361,8 @@ color: rgb(186, 189, 182);</string>
    <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>100</y>
+      <x>10</x>
+      <y>80</y>
       <width>241</width>
       <height>17</height>
      </rect>
@@ -386,7 +386,7 @@ color: rgb(186, 189, 182);</string>
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>210</y>
+      <y>170</y>
       <width>281</width>
       <height>17</height>
      </rect>
@@ -430,17 +430,6 @@ color: rgb(186, 189, 182);</string>
     <property name="text">
      <string>Choose the data you want</string>
     </property>
-   </widget>
-   <widget class="QWidget" name="formLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>-1</y>
-      <width>741</width>
-      <height>91</height>
-     </rect>
-    </property>
-    <layout class="QFormLayout" name="formLayout"/>
    </widget>
    <widget class="QWidget" name="gridLayoutWidget_3">
     <property name="geometry">

@@ -118,7 +118,7 @@ if(f){
 
         emit progress_changed(j);
         already_downloaded[j] = 1;
-        cout << "time cmd of file" << j + 1  << "["<< time_each.elapsed() / 1000.0 << "]" << "s";
+       // cout << "time cmd of file" << j + 1  << "["<< time_each.elapsed() / 1000.0 << "]" << "s";
     }
 
     cout << "file downloaded successfully !" << "total time cmd is:[" << tot_time.elapsed() / 1000.0 / 60.0 << "]min";

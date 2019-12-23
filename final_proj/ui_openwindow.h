@@ -13,7 +13,6 @@
 #include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QCheckBox>
-#include <QtWidgets/QFormLayout>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
@@ -48,8 +47,6 @@ public:
     QLabel *label_5;
     QLabel *label_6;
     QLabel *label_7;
-    QWidget *formLayoutWidget;
-    QFormLayout *formLayout;
     QWidget *gridLayoutWidget_3;
     QGridLayout *gridLayout_3;
     QMenuBar *menubar;
@@ -67,13 +64,13 @@ public:
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         advicing_route = new QPushButton(centralwidget);
         advicing_route->setObjectName(QStringLiteral("advicing_route"));
-        advicing_route->setGeometry(QRect(40, 120, 151, 41));
+        advicing_route->setGeometry(QRect(40, 100, 151, 41));
         advicing_route->setCursor(QCursor(Qt::PointingHandCursor));
         advicing_route->setStyleSheet(QLatin1String("QPushButton { background-color: rgb(30, 144, 252\n"
 "); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color: rgb(245, 69, 234); }"));
         data_plotting = new QPushButton(centralwidget);
         data_plotting->setObjectName(QStringLiteral("data_plotting"));
-        data_plotting->setGeometry(QRect(40, 230, 151, 41));
+        data_plotting->setGeometry(QRect(40, 190, 151, 41));
         data_plotting->setStyleSheet(QLatin1String("QPushButton { background-color: rgb(30, 144, 250\n"
 "); border-radius: 3px; color: rgb(255, 255, 255); } QPushButton:hover { background-color: rgb(245, 69, 234); }"));
         download_data = new QPushButton(centralwidget);
@@ -169,7 +166,7 @@ public:
         checkBox_11->setStyleSheet(QStringLiteral("color: rgb(211, 215, 207);"));
         label_5 = new QLabel(centralwidget);
         label_5->setObjectName(QStringLiteral("label_5"));
-        label_5->setGeometry(QRect(20, 100, 241, 17));
+        label_5->setGeometry(QRect(10, 80, 241, 17));
         QFont font4;
         font4.setFamily(QStringLiteral("Noto Serif CJK SC"));
         font4.setBold(true);
@@ -179,7 +176,7 @@ public:
         label_5->setStyleSheet(QStringLiteral("color: rgb(255, 255, 255);"));
         label_6 = new QLabel(centralwidget);
         label_6->setObjectName(QStringLiteral("label_6"));
-        label_6->setGeometry(QRect(0, 210, 281, 17));
+        label_6->setGeometry(QRect(0, 170, 281, 17));
         label_6->setFont(font4);
         label_6->setStyleSheet(QStringLiteral("color: rgb(255, 255, 255);"));
         label_7 = new QLabel(centralwidget);
@@ -193,12 +190,6 @@ public:
         font5.setWeight(75);
         label_7->setFont(font5);
         label_7->setStyleSheet(QStringLiteral("color: rgb(255, 255, 255);"));
-        formLayoutWidget = new QWidget(centralwidget);
-        formLayoutWidget->setObjectName(QStringLiteral("formLayoutWidget"));
-        formLayoutWidget->setGeometry(QRect(10, -1, 741, 91));
-        formLayout = new QFormLayout(formLayoutWidget);
-        formLayout->setObjectName(QStringLiteral("formLayout"));
-        formLayout->setContentsMargins(0, 0, 0, 0);
         gridLayoutWidget_3 = new QWidget(centralwidget);
         gridLayoutWidget_3->setObjectName(QStringLiteral("gridLayoutWidget_3"));
         gridLayoutWidget_3->setGeometry(QRect(10, 280, 741, 61));

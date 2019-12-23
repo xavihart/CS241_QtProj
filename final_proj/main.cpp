@@ -28,6 +28,9 @@ int main(int argc, char *argv[])
     opwindow.show();
     MainWindow adv_w;
     plotdata dataploting_w;
+    opwindow.move((a.desktop()->width() - opwindow.width()) / 2, (a.desktop()->height() - opwindow.height()) / 2);
+    adv_w.move((a.desktop()->width() - adv_w.width()) / 2, (a.desktop()->height() - adv_w.height()) / 2);
+    dataploting_w.move((a.desktop()->width() - dataploting_w.width()) / 2, (a.desktop()->height() - dataploting_w.height()) / 2);
     QObject::connect(&opwindow, SIGNAL(data_ready()), &dataploting_w, SLOT(data_prepared()));
     QObject::connect(&opwindow, SIGNAL(data_ready()), &adv_w, SLOT(data_prepared()));
 
@@ -71,6 +74,8 @@ int main(int argc, char *argv[])
     }
     }
     cout << "table prepared";
+
+
 
 
 /*

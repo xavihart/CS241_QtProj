@@ -10,29 +10,32 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     clock = new QTime();
-    this->setFixedSize(1000, 500);
+    this->setFixedSize(850, 478);
     load_adjacency_map();
 
     QStringList file_names = get_file_name("../dataset_CS241/dataset/");
-    connect(ui->pushButton_2, SIGNAL(clicked()), this, SLOT(send_signal_for_routeadvicing()));
+
     connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(ask_for_route_advicing()));
-    QPixmap pix_tmp("../dataset_CS241/pic/logo.jpg"), pix2("../dataset_CS241/pic/map.jpg");
+    QPixmap pix_tmp("../dataset_CS241/pic/hzlog.jpg"), pix2("../dataset_CS241/pic/map.jpg");
     ui->logo->setPixmap(pix_tmp);
     ui->logo->setScaledContents(true);
     ui->logo->show();
-    ui->map->setPixmap(pix2);
-    ui->map->setScaledContents(true);
-    ui->map->show();
+
     //QIcon icon1;
     //icon1.addFile("../dataset_CS241/pic/button1.png");
     ui->pushButton->setStyleSheet("border-image:url(../dataset_CS241/pic/button1.png)");
-
+    QPixmap bkg_pic("../dataset_CS241/pic/xue.jpg");
+    ui->bkg->setPixmap(bkg_pic);
+    ui->bkg->setScaledContents(true);
+    ui->bkg->lower();
+    ui->bkg->show();
 
     //----RegEXp----------------------------
     QRegExp regExp2("[0-9]{1,2}");
     QRegExpValidator *pRegExpValidator2 = new QRegExpValidator(regExp2,this);
     ui->dest->setValidator(pRegExpValidator2);
     ui->start->setValidator(pRegExpValidator2);
+    ui->showroute->setReadOnly(true);
     //--------------------------------------
 
 
@@ -213,6 +216,8 @@ vector<vector<int>> MainWindow::find_the_best_route(vector<vector<int>> routes){
         }
         scores[i] += tmp * weight_length;
     }
+    for(int i = 0;i < num;++i)
+        scores[i] += (avg_flow[i] / 100000.0) * weight_crowed;
     vector<vector<int>> ans;
     vector<int> index = my_sort(scores);
     for(int i =0 ;i < min(3, num);++i){
