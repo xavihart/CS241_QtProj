@@ -24,6 +24,11 @@
 #include <QtCharts/QValueAxis>
 #include<QVector>
 #include<QMessageBox>
+#include <QtGui/QGuiApplication>
+#include <QtCore/QDir>
+#include <QtQuick/QQuickView>
+#include <QtQml/QQmlEngine>
+
 
 namespace Ui {
   class plotdata;
@@ -52,12 +57,10 @@ public:
 public slots:
 
     void plot_passflow();
+    //void plot_line_station_total_flow();
     void data_prepared(){data_ready = 1;}
     void show_();
 
 
 };
-
-
-
 #endif // PLOTDATA_H

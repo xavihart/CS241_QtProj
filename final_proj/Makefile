@@ -1639,6 +1639,31 @@ moc_plotdata.cpp: ../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QMainWindow 
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/QLineSeries \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/QDateTimeAxis \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QVector \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QGuiApplication \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/QQuickView \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/qquickview.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/qquickwindow.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/qtquickglobal.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qtqmlglobal.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qtqml-config.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtNetwork/qtnetworkglobal.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtNetwork/qtnetwork-config.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/qtquick-config.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/qsgrendererinterface.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/qsgnode.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/qsggeometry.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QRectF \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqml.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqmlprivate.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqmlparserstatus.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqmlpropertyvaluesource.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqmllist.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqmldebug.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/QQmlEngine \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqmlengine.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qjsengine.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qjsvalue.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqmlerror.h \
 		plotdata.h \
 		moc_predefs.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/bin/moc
@@ -2263,6 +2288,31 @@ main.o: main.cpp mainwindow.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/QChartView \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/QLineSeries \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/QDateTimeAxis \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QGuiApplication \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/QQuickView \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/qquickview.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/qquickwindow.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/qtquickglobal.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qtqmlglobal.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qtqml-config.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtNetwork/qtnetworkglobal.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtNetwork/qtnetwork-config.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/qtquick-config.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/qsgrendererinterface.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/qsgnode.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/qsggeometry.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QRectF \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqml.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqmlprivate.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqmlparserstatus.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqmlpropertyvaluesource.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqmllist.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqmldebug.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/QQmlEngine \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqmlengine.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qjsengine.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qjsvalue.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqmlerror.h \
 		ui_openwindow.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QCheckBox \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QGridLayout \
@@ -3239,6 +3289,31 @@ plotdata.o: plotdata.cpp plotdata.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/QLineSeries \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/QDateTimeAxis \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QVector \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QGuiApplication \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/QQuickView \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/qquickview.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/qquickwindow.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/qtquickglobal.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qtqmlglobal.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qtqml-config.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtNetwork/qtnetworkglobal.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtNetwork/qtnetwork-config.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/qtquick-config.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/qsgrendererinterface.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/qsgnode.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/qsggeometry.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QRectF \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqml.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqmlprivate.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqmlparserstatus.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqmlpropertyvaluesource.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqmllist.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqmldebug.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/QQmlEngine \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqmlengine.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qjsengine.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qjsvalue.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqmlerror.h \
 		ui_plotdata.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QDate \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QDateTimeEdit \

@@ -44,6 +44,8 @@ public:
     QLabel *label_station_2;
     QLabel *label_station_3;
     QLabel *bkg;
+    QPushButton *plotstation;
+    QLabel *label_hour_2;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -70,7 +72,7 @@ public:
         dateTimeEdit_2->setMinimumDate(QDate(2019, 1, 1));
         plt = new QPushButton(centralwidget);
         plt->setObjectName(QStringLiteral("plt"));
-        plt->setGeometry(QRect(500, 130, 171, 25));
+        plt->setGeometry(QRect(260, 180, 171, 25));
         step_hour = new QLineEdit(centralwidget);
         step_hour->setObjectName(QStringLiteral("step_hour"));
         step_hour->setGeometry(QRect(300, 70, 51, 21));
@@ -129,6 +131,13 @@ public:
         bkg = new QLabel(centralwidget);
         bkg->setObjectName(QStringLiteral("bkg"));
         bkg->setGeometry(QRect(0, -4, 841, 271));
+        plotstation = new QPushButton(centralwidget);
+        plotstation->setObjectName(QStringLiteral("plotstation"));
+        plotstation->setGeometry(QRect(560, 110, 71, 25));
+        label_hour_2 = new QLabel(centralwidget);
+        label_hour_2->setObjectName(QStringLiteral("label_hour_2"));
+        label_hour_2->setGeometry(QRect(510, 90, 171, 17));
+        label_hour_2->setStyleSheet(QStringLiteral("color: rgb(252, 233, 79);"));
         plotdata->setCentralWidget(centralwidget);
         menubar = new QMenuBar(plotdata);
         menubar->setObjectName(QStringLiteral("menubar"));
@@ -159,6 +168,8 @@ public:
         label_station_2->setText(QApplication::translate("plotdata", "From", nullptr));
         label_station_3->setText(QApplication::translate("plotdata", "To", nullptr));
         bkg->setText(QString());
+        plotstation->setText(QApplication::translate("plotdata", "Plot", nullptr));
+        label_hour_2->setText(QApplication::translate("plotdata", "Station Crowding Degree", nullptr));
     } // retranslateUi
 
 };

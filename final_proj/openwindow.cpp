@@ -57,10 +57,11 @@ void my_thread::run(){
     sql_query.next();
     bool isTableExist = (sql_query.value(0).toInt() != 0);
     cout << isTableExist << "!";
+
     if(isTableExist){
       cout << "Table exist, no need creating!---";
     }else{
-      QString create_m = "create table record (time varchar(22), lineID int, stationID int, status int, paytype int)";
+      QString create_m = "create table record (time varchar(22), lineID varchar(3), stationID int, status int, paytype int)";
       sql_query.prepare(create_m);
       if(sql_query.exec()){
           //cout << "table created successfully in my_thread";
@@ -105,7 +106,8 @@ if(f){
             sql_query.prepare("INSERT INTO record (time, lineID, stationID, status, paytype) VALUES(?, ?, ?, ?, ?)");
             t = tmp.at(i).split(",");
             sql_query.bindValue(0, t[0]);
-            sql_query.bindValue(1, t[1].toInt());
+            sql_query.bindValue(1, t[1]);
+            //cout << t[1];
             sql_query.bindValue(2, t[2].toInt());
             sql_query.bindValue(3, t[4].toInt());
             sql_query.bindValue(4, t[6].toInt());

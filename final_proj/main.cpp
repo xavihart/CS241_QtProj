@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
     if(isTableExist){
       cout << "Table exist, no need creating!---";
     }else{
-    QString create_m = "create table record (time varchar(22), lineID int, stationID int, status int, paytype int)";
+    QString create_m = "create table record (time varchar(22), lineID varchar(3), stationID int, status int, paytype int)";
 
     //            OMIT userID AND deviceID to make the insertion faster...
     // time, lineID, stationID, status, paytype
