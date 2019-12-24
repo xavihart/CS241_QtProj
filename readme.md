@@ -1,6 +1,13 @@
 
 ## source file of the CS241 final project
 About " Data Visualization and Analysis of Hanzhou Metric System" written in Qt5 in linux.
+
+#### Demo:
+
+![exp](https://github.com/xavihart/CS241_QtProj/blob/master/openwindow.PNG)
+
+
+
 The main functions that are planned to be implemented:
 
 |Load file according to the users' interest|
@@ -33,6 +40,8 @@ The ui are mainly made up of 3 parts: `ui_openwindow`, `ui_mainwindow` and `ui_p
 |ui_mainwindow|window for users to get route advice|
 |ui_plotdata|window for users to visualize passanger flow|
 
-    
+
+ ###   More Windows:
+ ![exp](https://github.com/xavihart/CS241_QtProj/blob/master/designPic.PNG)
 
 
