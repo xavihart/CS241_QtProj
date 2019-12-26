@@ -8,8 +8,9 @@ ui(new Ui::plotdata)
   ui->setupUi(this);
   this->setWindowTitle("Visualize Hanzhou Metro Traffic Flow");
   connect(ui->plt, SIGNAL(clicked(bool)), this, SLOT(plot_passflow()));
+  connect(ui->plotstation, SIGNAL(clicked(bool)), this, SLOT(plot_line_station_total_flow()));
   this->setFixedHeight(314);
-  this->setFixedWidth(822);
+  this->setFixedWidth(642);
   QPixmap bkg_pic("../dataset_CS241/pic/hz2.jpg");
   ui->bkg->setPixmap(bkg_pic);
   ui->bkg->setScaledContents(true);
@@ -226,5 +227,74 @@ void plotdata::show_(){
     }
 }
 
+void plotdata::plot_line_station_total_flow(){
+
+   set = new QBarSet("Crowding");
+
+
+    QBarSeries *series = new QBarSeries();
+    vector<double> raw;
+    vector<int> index;
+    for(int i =0 ;i < 81;++i)
+        raw.push_back((crd_A[i]+crd_C[i]+crd_B[i]) /100);
+    index = my_sort(raw);
+
+
+    for(int i =0 ; i < 40;++i)
+         *set << raw[index[80-i]];
+    set->setColor(Qt::red);
+
+    series->append(set);
+
+    QStringList categories;
+
+    for(int i = 0;i < 40;++i)
+        categories << QString::number(index[80-i] + 1);
+    QChart *chart = new QChart();
+    chart->addSeries(series);
+    chart->setTitle("Station Crowding Degree");
+    chart->legend()->hide();
+    chart->setAnimationOptions(QChart::SeriesAnimations);
+
+    QBarCategoryAxis *axis = new QBarCategoryAxis();
+    axis->append(categories);
+    chart->createDefaultAxes();
+    chart->setAxisX(axis, series);
+
+
+    QChartView *chartView = new QChartView(chart);
+    chartView->setRenderHint(QPainter::Antialiasing);
+    chartView->setWindowTitle("Top crowded station");
+    chartView->show();
+
+}
+
+template<class T>
+vector<int> plotdata::my_sort(vector<T> a){
+    vector<int> index;
+    int n = a.size();
+    for(int i =0 ;i < n;++i)
+        index.push_back(i);
+
+    for(int j = n - 1;j >=0;--j){
+        int f = 0;
+        for(int i =0 ;i < j;++i){
+            if(a[i] > a[i+1]){
+                f = 1;
+                int dtmp, itmp;
+                dtmp = a[i];
+                a[i] = a[i + 1];
+                a[i + 1] = dtmp;
+                itmp = index[i];
+                index[i] = index[i + 1];
+                index[i + 1] = itmp;
+            }
+        }
+        if(f == 0) break;
+    }
+
+
+    return index;
+}
 
 

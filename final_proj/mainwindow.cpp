@@ -10,13 +10,14 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     clock = new QTime();
-    this->setFixedSize(850, 478);
+    this->setFixedSize(850, 381);
     load_adjacency_map();
+    this->setWindowTitle("Metro route advicing system");
 
     QStringList file_names = get_file_name("../dataset_CS241/dataset/");
 
     connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(ask_for_route_advicing()));
-    QPixmap pix_tmp("../dataset_CS241/pic/hzlog.jpg"), pix2("../dataset_CS241/pic/map.jpg");
+    QPixmap pix_tmp("../dataset_CS241/pic/logo.jpg"), pix2("../dataset_CS241/pic/map.jpg");
     ui->logo->setPixmap(pix_tmp);
     ui->logo->setScaledContents(true);
     ui->logo->show();

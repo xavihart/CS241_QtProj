@@ -45,7 +45,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(850, 478);
+        MainWindow->resize(850, 381);
         QFont font;
         font.setPointSize(11);
         MainWindow->setFont(font);
@@ -58,38 +58,39 @@ public:
         pushButton->setStyleSheet(QStringLiteral("color: rgb(238, 238, 236);"));
         start = new QLineEdit(centralWidget);
         start->setObjectName(QStringLiteral("start"));
-        start->setGeometry(QRect(190, 100, 81, 41));
+        start->setGeometry(QRect(190, 100, 51, 31));
         start->setStyleSheet(QStringLiteral(""));
         dest = new QLineEdit(centralWidget);
         dest->setObjectName(QStringLiteral("dest"));
-        dest->setGeometry(QRect(190, 170, 81, 41));
+        dest->setGeometry(QRect(190, 180, 51, 31));
         showroute = new QTextEdit(centralWidget);
         showroute->setObjectName(QStringLiteral("showroute"));
-        showroute->setGeometry(QRect(300, 100, 541, 111));
+        showroute->setGeometry(QRect(260, 100, 581, 111));
         QFont font1;
         font1.setPointSize(15);
         font1.setBold(true);
         font1.setWeight(75);
         showroute->setFont(font1);
-        showroute->setStyleSheet(QStringLiteral("color: rgb(136, 138, 133);"));
+        showroute->setStyleSheet(QLatin1String("color: rgb(136, 138, 133);\n"
+"background-color: rgb(255, 255, 255);"));
         label_2 = new QLabel(centralWidget);
         label_2->setObjectName(QStringLiteral("label_2"));
         label_2->setGeometry(QRect(90, 450, 601, 91));
         logo = new QLabel(centralWidget);
         logo->setObjectName(QStringLiteral("logo"));
-        logo->setGeometry(QRect(590, 220, 61, 51));
+        logo->setGeometry(QRect(160, 20, 50, 50));
         label = new QLabel(centralWidget);
         label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(250, 10, 371, 51));
+        label->setGeometry(QRect(230, 20, 501, 51));
         QFont font2;
         font2.setPointSize(26);
         font2.setBold(true);
         font2.setWeight(75);
         label->setFont(font2);
-        label->setStyleSheet(QStringLiteral("color: rgb(255, 255, 255);"));
+        label->setStyleSheet(QStringLiteral("color: rgb(32, 74, 135);"));
         label_4 = new QLabel(centralWidget);
         label_4->setObjectName(QStringLiteral("label_4"));
-        label_4->setGeometry(QRect(30, 110, 151, 17));
+        label_4->setGeometry(QRect(30, 100, 151, 17));
         QFont font3;
         font3.setFamily(QStringLiteral("TeX Gyre Adventor"));
         font3.setBold(true);
@@ -133,9 +134,9 @@ public:
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", nullptr));
         label_2->setText(QString());
         logo->setText(QString());
-        label->setText(QApplication::translate("MainWindow", "Metro Route Planning", nullptr));
-        label_4->setText(QApplication::translate("MainWindow", "Departure :StationID", nullptr));
-        label_5->setText(QApplication::translate("MainWindow", "Destination :StationID", nullptr));
+        label->setText(QApplication::translate("MainWindow", "Metro Route Planning System", nullptr));
+        label_4->setText(QApplication::translate("MainWindow", "Departure :StationID:", nullptr));
+        label_5->setText(QApplication::translate("MainWindow", "Destination :StationID:", nullptr));
         bkg->setText(QString());
     } // retranslateUi
 

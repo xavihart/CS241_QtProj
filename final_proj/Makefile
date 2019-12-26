@@ -12,10 +12,10 @@ MAKEFILE      = Makefile
 
 CC            = gcc
 CXX           = g++
-DEFINES       = -DQT_DEPRECATED_WARNINGS -DQT_NO_DEBUG -DQT_CHARTS_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_CORE_LIB
+DEFINES       = -DQT_DEPRECATED_WARNINGS -DQT_NO_DEBUG -DQT_CHARTS_LIB -DQT_WIDGETS_LIB -DQT_DATAVISUALIZATION_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_CORE_LIB
 CFLAGS        = -pipe -O2 -Wall -W -D_REENTRANT -fPIC $(DEFINES)
 CXXFLAGS      = -pipe -O2 -Wall -W -D_REENTRANT -fPIC $(DEFINES)
-INCPATH       = -I. -I../../../Qt5.11.1/5.11.1/gcc_64/include -I../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts -I../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets -I../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui -I../../../Qt5.11.1/5.11.1/gcc_64/include/QtSql -I../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore -I. -isystem /usr/include/libdrm -I. -I../../../Qt5.11.1/5.11.1/gcc_64/mkspecs/linux-g++
+INCPATH       = -I. -I../../../Qt5.11.1/5.11.1/gcc_64/include -I../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts -I../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets -I../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization -I../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui -I../../../Qt5.11.1/5.11.1/gcc_64/include/QtSql -I../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore -I. -isystem /usr/include/libdrm -I. -I../../../Qt5.11.1/5.11.1/gcc_64/mkspecs/linux-g++
 QMAKE         = /home/chrisxue/Qt5.11.1/5.11.1/gcc_64/bin/qmake
 DEL_FILE      = rm -f
 CHK_DIR_EXISTS= test -d
@@ -38,7 +38,7 @@ DISTNAME      = final_proj1.0.0
 DISTDIR = /home/chrisxue/Qtfile/CS241_QtProj/final_proj/.tmp/final_proj1.0.0
 LINK          = g++
 LFLAGS        = -Wl,-O1 -Wl,-rpath,/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/lib
-LIBS          = $(SUBLIBS) -L/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/lib -lQt5Charts -lQt5Widgets -lQt5Gui -lQt5Sql -lQt5Core -lGL -lpthread 
+LIBS          = $(SUBLIBS) -L/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/lib -lQt5Charts -lQt5Widgets -lQt5DataVisualization -lQt5Gui -lQt5Sql -lQt5Core -lGL -lpthread 
 AR            = ar cqs
 RANLIB        = 
 SED           = sed
@@ -459,6 +459,7 @@ Makefile: final_proj.pro ../../../Qt5.11.1/5.11.1/gcc_64/mkspecs/linux-g++/qmake
 		final_proj.pro \
 		../../../Qt5.11.1/5.11.1/gcc_64/lib/libQt5Charts.prl \
 		../../../Qt5.11.1/5.11.1/gcc_64/lib/libQt5Widgets.prl \
+		../../../Qt5.11.1/5.11.1/gcc_64/lib/libQt5DataVisualization.prl \
 		../../../Qt5.11.1/5.11.1/gcc_64/lib/libQt5Gui.prl \
 		../../../Qt5.11.1/5.11.1/gcc_64/lib/libQt5Sql.prl \
 		../../../Qt5.11.1/5.11.1/gcc_64/lib/libQt5Core.prl
@@ -654,6 +655,7 @@ Makefile: final_proj.pro ../../../Qt5.11.1/5.11.1/gcc_64/mkspecs/linux-g++/qmake
 final_proj.pro:
 ../../../Qt5.11.1/5.11.1/gcc_64/lib/libQt5Charts.prl:
 ../../../Qt5.11.1/5.11.1/gcc_64/lib/libQt5Widgets.prl:
+../../../Qt5.11.1/5.11.1/gcc_64/lib/libQt5DataVisualization.prl:
 ../../../Qt5.11.1/5.11.1/gcc_64/lib/libQt5Gui.prl:
 ../../../Qt5.11.1/5.11.1/gcc_64/lib/libQt5Sql.prl:
 ../../../Qt5.11.1/5.11.1/gcc_64/lib/libQt5Core.prl:
@@ -882,7 +884,7 @@ moc_mainwindow.cpp: ../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QAction \
 		mainwindow.h \
 		moc_predefs.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/bin/moc
-	/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/bin/moc $(DEFINES) --include ./moc_predefs.h -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/mkspecs/linux-g++ -I/home/chrisxue/Qtfile/CS241_QtProj/final_proj -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/include -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/include/QtCharts -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/include/QtGui -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/include/QtSql -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/include/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include mainwindow.h -o moc_mainwindow.cpp
+	/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/bin/moc $(DEFINES) --include ./moc_predefs.h -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/mkspecs/linux-g++ -I/home/chrisxue/Qtfile/CS241_QtProj/final_proj -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/include -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/include/QtCharts -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/include/QtGui -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/include/QtSql -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/include/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include mainwindow.h -o moc_mainwindow.cpp
 
 moc_openwindow.cpp: ../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QAction \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qaction.h \
@@ -1056,7 +1058,7 @@ moc_openwindow.cpp: ../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QAction \
 		openwindow.h \
 		moc_predefs.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/bin/moc
-	/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/bin/moc $(DEFINES) --include ./moc_predefs.h -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/mkspecs/linux-g++ -I/home/chrisxue/Qtfile/CS241_QtProj/final_proj -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/include -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/include/QtCharts -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/include/QtGui -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/include/QtSql -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/include/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include openwindow.h -o moc_openwindow.cpp
+	/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/bin/moc $(DEFINES) --include ./moc_predefs.h -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/mkspecs/linux-g++ -I/home/chrisxue/Qtfile/CS241_QtProj/final_proj -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/include -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/include/QtCharts -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/include/QtGui -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/include/QtSql -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/include/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include openwindow.h -o moc_openwindow.cpp
 
 moc_plotdata.cpp: ../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QMainWindow \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/qmainwindow.h \
@@ -1639,35 +1641,38 @@ moc_plotdata.cpp: ../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QMainWindow 
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/QLineSeries \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/QDateTimeAxis \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QVector \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QGuiApplication \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/QQuickView \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/qquickview.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/qquickwindow.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/qtquickglobal.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qtqmlglobal.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qtqml-config.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtNetwork/qtnetworkglobal.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtNetwork/qtnetwork-config.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/qtquick-config.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/qsgrendererinterface.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/qsgnode.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/qsggeometry.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QRectF \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqml.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqmlprivate.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqmlparserstatus.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqmlpropertyvaluesource.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqmllist.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqmldebug.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/QQmlEngine \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqmlengine.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qjsengine.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qjsvalue.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqmlerror.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/q3dbars.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qabstract3dgraph.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qdatavisualizationglobal.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/q3dtheme.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QLinearGradient \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/q3dscene.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/q3dcamera.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/q3dobject.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/q3dlight.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qabstract3dinputhandler.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QPoint \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QWheelEvent \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QMouseEvent \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QTouchEvent \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QOpenGLFunctions \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QLocale \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qvalue3daxis.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qabstract3daxis.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qvalue3daxisformatter.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qcategory3daxis.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qbar3dseries.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qabstract3dseries.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QQuaternion \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qbardataproxy.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qabstractdataproxy.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qbardataitem.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QPointer \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QPropertyAnimation \
 		plotdata.h \
 		moc_predefs.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/bin/moc
-	/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/bin/moc $(DEFINES) --include ./moc_predefs.h -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/mkspecs/linux-g++ -I/home/chrisxue/Qtfile/CS241_QtProj/final_proj -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/include -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/include/QtCharts -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/include/QtGui -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/include/QtSql -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/include/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include plotdata.h -o moc_plotdata.cpp
+	/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/bin/moc $(DEFINES) --include ./moc_predefs.h -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/mkspecs/linux-g++ -I/home/chrisxue/Qtfile/CS241_QtProj/final_proj -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/include -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/include/QtCharts -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/include/QtWidgets -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/include/QtGui -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/include/QtSql -I/home/chrisxue/Qt5.11.1/5.11.1/gcc_64/include/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include plotdata.h -o moc_plotdata.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -2288,31 +2293,34 @@ main.o: main.cpp mainwindow.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/QChartView \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/QLineSeries \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/QDateTimeAxis \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QGuiApplication \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/QQuickView \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/qquickview.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/qquickwindow.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/qtquickglobal.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qtqmlglobal.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qtqml-config.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtNetwork/qtnetworkglobal.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtNetwork/qtnetwork-config.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/qtquick-config.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/qsgrendererinterface.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/qsgnode.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/qsggeometry.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QRectF \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqml.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqmlprivate.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqmlparserstatus.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqmlpropertyvaluesource.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqmllist.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqmldebug.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/QQmlEngine \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqmlengine.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qjsengine.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qjsvalue.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqmlerror.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/q3dbars.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qabstract3dgraph.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qdatavisualizationglobal.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/q3dtheme.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QLinearGradient \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/q3dscene.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/q3dcamera.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/q3dobject.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/q3dlight.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qabstract3dinputhandler.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QPoint \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QWheelEvent \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QMouseEvent \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QTouchEvent \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QOpenGLFunctions \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QLocale \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qvalue3daxis.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qabstract3daxis.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qvalue3daxisformatter.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qcategory3daxis.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qbar3dseries.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qabstract3dseries.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QQuaternion \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qbardataproxy.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qabstractdataproxy.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qbardataitem.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QPointer \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QPropertyAnimation \
 		ui_openwindow.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QCheckBox \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QGridLayout \
@@ -3289,31 +3297,34 @@ plotdata.o: plotdata.cpp plotdata.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/QLineSeries \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/QDateTimeAxis \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QVector \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QGuiApplication \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/QQuickView \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/qquickview.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/qquickwindow.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/qtquickglobal.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qtqmlglobal.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qtqml-config.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtNetwork/qtnetworkglobal.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtNetwork/qtnetwork-config.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/qtquick-config.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/qsgrendererinterface.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/qsgnode.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQuick/qsggeometry.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QRectF \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqml.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqmlprivate.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqmlparserstatus.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqmlpropertyvaluesource.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqmllist.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqmldebug.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/QQmlEngine \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqmlengine.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qjsengine.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qjsvalue.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtQml/qqmlerror.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/q3dbars.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qabstract3dgraph.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qdatavisualizationglobal.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/q3dtheme.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QLinearGradient \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/q3dscene.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/q3dcamera.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/q3dobject.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/q3dlight.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qabstract3dinputhandler.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QPoint \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QWheelEvent \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QMouseEvent \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QTouchEvent \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QOpenGLFunctions \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QLocale \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qvalue3daxis.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qabstract3daxis.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qvalue3daxisformatter.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qcategory3daxis.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qbar3dseries.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qabstract3dseries.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QQuaternion \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qbardataproxy.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qabstractdataproxy.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qbardataitem.h \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QPointer \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QPropertyAnimation \
 		ui_plotdata.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QDate \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QDateTimeEdit \

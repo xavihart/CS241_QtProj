@@ -6,6 +6,8 @@ QMainWindow(parent),
 ui(new Ui::openwindow)
 {
   ui->setupUi(this);
+  this->setFixedHeight(390);
+  this->setFixedWidth(769);
   this->setWindowTitle("Welcome to HanZhou Metro System");
   connect(&mt, SIGNAL(progress_changed(int)), this, SLOT(change_progbar(int)));
   // set the image:
