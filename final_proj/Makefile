@@ -1641,34 +1641,8 @@ moc_plotdata.cpp: ../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QMainWindow 
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/QLineSeries \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/QDateTimeAxis \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QVector \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/q3dbars.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qabstract3dgraph.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qdatavisualizationglobal.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/q3dtheme.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QLinearGradient \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/q3dscene.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/q3dcamera.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/q3dobject.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/q3dlight.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qabstract3dinputhandler.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QPoint \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QWheelEvent \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QMouseEvent \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QTouchEvent \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QOpenGLFunctions \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QLocale \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qvalue3daxis.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qabstract3daxis.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qvalue3daxisformatter.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qcategory3daxis.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qbar3dseries.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qabstract3dseries.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QQuaternion \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qbardataproxy.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qabstractdataproxy.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qbardataitem.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QPointer \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QPropertyAnimation \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/QBarSeries \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/QBarCategoryAxis \
 		plotdata.h \
 		moc_predefs.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/bin/moc
@@ -2293,34 +2267,8 @@ main.o: main.cpp mainwindow.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/QChartView \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/QLineSeries \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/QDateTimeAxis \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/q3dbars.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qabstract3dgraph.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qdatavisualizationglobal.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/q3dtheme.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QLinearGradient \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/q3dscene.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/q3dcamera.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/q3dobject.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/q3dlight.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qabstract3dinputhandler.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QPoint \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QWheelEvent \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QMouseEvent \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QTouchEvent \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QOpenGLFunctions \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QLocale \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qvalue3daxis.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qabstract3daxis.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qvalue3daxisformatter.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qcategory3daxis.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qbar3dseries.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qabstract3dseries.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QQuaternion \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qbardataproxy.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qabstractdataproxy.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qbardataitem.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QPointer \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QPropertyAnimation \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/QBarSeries \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/QBarCategoryAxis \
 		ui_openwindow.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QCheckBox \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QGridLayout \
@@ -3297,34 +3245,8 @@ plotdata.o: plotdata.cpp plotdata.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/QLineSeries \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/QDateTimeAxis \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QVector \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/q3dbars.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qabstract3dgraph.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qdatavisualizationglobal.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/q3dtheme.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QLinearGradient \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/q3dscene.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/q3dcamera.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/q3dobject.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/q3dlight.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qabstract3dinputhandler.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QPoint \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QWheelEvent \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QMouseEvent \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QTouchEvent \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QOpenGLFunctions \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QLocale \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qvalue3daxis.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qabstract3daxis.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qvalue3daxisformatter.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qcategory3daxis.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qbar3dseries.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qabstract3dseries.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtGui/QQuaternion \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qbardataproxy.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qabstractdataproxy.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtDataVisualization/qbardataitem.h \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QPointer \
-		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QPropertyAnimation \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/QBarSeries \
+		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCharts/QBarCategoryAxis \
 		ui_plotdata.h \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtCore/QDate \
 		../../../Qt5.11.1/5.11.1/gcc_64/include/QtWidgets/QDateTimeEdit \

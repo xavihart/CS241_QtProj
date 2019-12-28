@@ -24,11 +24,13 @@ void plotdata::plot_passflow(){
     in_flow.clear();
     out_flow.clear();
     x_stick.clear();
+    cout << 1;
     QSqlDatabase database;
     QTime tot_time;
     tot_time.start();
     database = QSqlDatabase::addDatabase("QSQLITE");
     database.setDatabaseName("../MetroRecord.db");
+    cout << 2;
     QSqlQuery sql_query;
     if(!database.open())
         cout << "data base open failed in plot part!" <<sql_query.lastError();
@@ -42,6 +44,7 @@ void plotdata::plot_passflow(){
         station_num = ui->stationnumber->text().toInt() - 1;
      QDateTime tmp = stime;
      int num_in=0, num_out=0;
+      cout << 3;
      if((step_hour * 60 * 60 +  step_min * 60 + step_sec) == 0){
          QMessageBox::information(NULL, "Warning", "Time step cannot be zero!",
                                   QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes);
@@ -53,6 +56,7 @@ void plotdata::plot_passflow(){
          return;
      }
      int max1=0, max2=0;
+
      for(;;){
          QDateTime tmp_r = tmp;
          tmp_r = tmp_r.addSecs(step_hour * 60 * 60 +  step_min * 60 + step_sec);
@@ -84,9 +88,21 @@ void plotdata::plot_passflow(){
 
      int point_number=0;
      point_number = x_stick.count();
+   // do some filter to make the curve more smooth
+     if(step_hour == 0 && step_min <= 2){
+             in_flow = filter(in_flow);
+             out_flow = filter(out_flow);
+     }
 
+     double max_1_new, max_2_new;
+     for(int i =0 ;i < in_flow.size();++i){
+         max_1_new = max(max_1_new, in_flow.at(i));
+         max_2_new = max(max_2_new, out_flow.at(i));
+     }
+     max1 = max_1_new;
+     max2 = max_2_new;
    // ------------------------draw plot---------------
-   if(point_number > 30){
+   if(point_number > 60){
      series = new QLineSeries();
      series2 =  new QLineSeries();
      for(int i = 0;i < in_flow.size();++i){
@@ -140,7 +156,7 @@ void plotdata::plot_passflow(){
    }
 
 
-   if(point_number <= 30){
+   if(point_number <= 60){
        sps = new QSplineSeries();
        sps2 =  new QSplineSeries();
        for(int i = 0;i < in_flow.size();++i){
@@ -299,8 +315,65 @@ vector<int> plotdata::my_sort(vector<T> a){
         if(f == 0) break;
     }
 
-
     return index;
+}
+
+
+template<class T>
+QVector<T> plotdata::filter(QVector<T> a){
+    /*
+    QVector<T> b;
+    T min = 100.0;
+    for(int i =0 ;i < a.size();++i)
+        min = (a.at(i)< min) ? a.at(i):min;
+    for(int i = 0;i < a.size();++i){
+
+        if(a.at(i) !=min ){
+            b.push_back(a.at(i));
+            continue;
+        }
+        int l=-1, r=-1;
+        for(int j = i - 1; j > 0;--j)
+            if(a.at(j) != min){
+              l = j;break;
+            }
+        for(int j = i + 1; j < a.size();++j)
+            if(a.at(j) != min){
+              r = j;break;
+            }
+        if(l < 0 || r < 0) continue;
+        b.push_back((a.at(l) + a.at(r))/2.0);
+    }
+    a = b;
+  for(int i = 0;i < b.size();++i)
+      cout << b.at(i);
+    return a;
+
+    */
+
+
+    int left = - filterlen, right = filterlen, len=a.size();
+    int len_filter = (right - left + 1);
+    double windowsum = 0.0;
+    QVector<T> b;    for(int i=left;i <= right;++i){
+        if(i < 0 || i >= len)
+            continue;
+        else
+            windowsum + a[i];
+    }
+    for(int i =0 ;i < len;++i){
+       left++;
+       right++;
+       if(left >= 0)
+           windowsum -= a[left];
+       if(right < len)
+           windowsum += a[right];
+       b.push_back(windowsum / (len_filter * 1.0));
+    }
+
+    return b;
+
+
 }
 
 

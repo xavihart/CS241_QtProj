@@ -79,6 +79,58 @@ public:
                      ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0}; //[35-69]
     template<class T>
         vector<int> my_sort(vector<T> );
+    template<class T>
+        QVector<T> filter(QVector<T>);
+    int filterlen=60;
+    double coef1[16] = {-0.03252796, -0.81560961,  0.26367753,  1.56807106,  0.77953809,
+                        0.26451983,  0.46030562, -1.64902383, -1.55571303,  1.44245154,
+                       -0.03054342};
+    double coef2[16] = {0.0};
+    double lr = 0.00001;
+    int poly = 5;
+    double st = 500;
+    double d = 0;
+    QVector<double> y;
+    void regresstion(int iteration){
+        for(int i = 0;i < iteration; ++i)
+        {   cout << "iter" << i;
+            iter();
+        }
+    }
+    void iter(){
+        int num = qrand() % poly;
+        double sum = 0.0;
+        for(int k = 0;k < y.size();++k){
+            double sum_ = 0.0;
+            for(int i =0 ; i < poly;++i){
+                sum_ +=  coef1[i] * pow(k / st, i);
+            }
+
+            if(y.at(k) == 0)
+                sum_ *= d;
+            sum += sum_ * 2.0 * pow(k / st, 1.0*num);
+        }
+        double loss=0.0;
+        for(int i =0 ;i < y.size();++i){
+            double loss_ = pow((cal_f(i/st) - y.at(i)), 2);
+            if(y.at(i) == 0)
+                loss_ *= d;
+            loss+=loss_;
+        }
+
+            cout << "loss" << loss;
+            coef1[num] -= lr * sum;
+    }
+
+    double cal_f(double x){
+        double sum = 0.0;
+        for(int i =0 ;i < poly;++i){
+            sum += pow(x / st, i) * coef1[i];
+        }
+        return sum;
+    }
+
+
 public slots:
 
     void plot_passflow();
