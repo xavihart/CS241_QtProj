@@ -235,6 +235,8 @@ vector<vector<int>> MainWindow::find_the_best_route(vector<vector<int>> routes){
 
 
 void MainWindow::ask_for_route_advicing(){
+    //QTime ti;
+\
     solving_route();
     if (input_right == 0) return;
     vector<vector<int>> a = find_the_best_route(route);
@@ -252,6 +254,7 @@ void MainWindow::ask_for_route_advicing(){
         d+="\n";
     }
     ui->showroute->setText(d);
+    //cout << "time for planning:" << ti.elapsed();
 }
 
 template<class T>

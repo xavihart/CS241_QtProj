@@ -20,6 +20,7 @@ ui(new Ui::plotdata)
 
 plotdata::~plotdata(){delete ui;}
 void plotdata::plot_passflow(){
+
     in_flow.clear();
     out_flow.clear();
     x_stick.clear();
@@ -70,9 +71,9 @@ void plotdata::plot_passflow(){
          sql_query.next();
          num_out = sql_query.value(0).toInt();
          x_stick.push_back(tmp.toMSecsSinceEpoch());
-         num_in = num_in / ((tmp_r.toMSecsSinceEpoch()  - tmp.toMSecsSinceEpoch()) / 60000.0);
-         num_out = num_out / ((tmp_r.toMSecsSinceEpoch()  - tmp.toMSecsSinceEpoch()) / 60000.0);
-         cout << num_in << num_out;
+         num_in = num_in ;
+         num_out = num_out ;
+
          in_flow.push_back(num_in);
          out_flow.push_back(num_out);
          tmp = tmp_r;
@@ -85,7 +86,7 @@ void plotdata::plot_passflow(){
      point_number = x_stick.count();
 
    // ------------------------draw plot---------------
-   if(point_number > 15){
+   if(point_number > 30){
      series = new QLineSeries();
      series2 =  new QLineSeries();
      for(int i = 0;i < in_flow.size();++i){
@@ -139,7 +140,7 @@ void plotdata::plot_passflow(){
    }
 
 
-   if(point_number <= 15){
+   if(point_number <= 30){
        sps = new QSplineSeries();
        sps2 =  new QSplineSeries();
        for(int i = 0;i < in_flow.size();++i){
@@ -206,6 +207,7 @@ void plotdata::plot_passflow(){
     cout << sql_query.value(0).toInt() << "in the given scope";    */
     database.close();
 
+
 }
 
 
@@ -225,10 +227,12 @@ void plotdata::show_(){
     }else{
         this->show();
     }
+
 }
 
 void plotdata::plot_line_station_total_flow(){
-
+   QTime ti;
+   ti.start();
    set = new QBarSet("Crowding");
 
 
@@ -265,7 +269,9 @@ void plotdata::plot_line_station_total_flow(){
     QChartView *chartView = new QChartView(chart);
     chartView->setRenderHint(QPainter::Antialiasing);
     chartView->setWindowTitle("Top crowded station");
+    chartView->setFixedSize(1400, 600);
     chartView->show();
+     cout << ti.elapsed()<< endl;
 
 }
 
